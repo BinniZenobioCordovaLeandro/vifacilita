@@ -4,12 +4,14 @@ class ButtonImage extends StatelessWidget {
   final void Function()? onTap;
   final String image;
   final Color? color;
+  final String? title;
 
   const ButtonImage({
     super.key,
     this.onTap,
     required this.image,
     this.color = Colors.white,
+    this.title,
   });
 
   @override
@@ -17,9 +19,27 @@ class ButtonImage extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       borderRadius: const BorderRadius.all(Radius.circular(20)),
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Image.asset(image, color: color),
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Image.asset(image, color: color),
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Text(
+                title ?? '',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleSmall
+                    ?.copyWith(color: color),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

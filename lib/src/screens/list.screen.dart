@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vifacilita/data/route.data.dart';
+import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/components/list_tile_button.dart';
 
 class ListScreen extends StatelessWidget {
@@ -12,10 +13,12 @@ class ListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final routeItem = routeData[routeName.path];
+    AppLocalizations localizations = AppLocalizations.of(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(routeData[routeName.path]?.title ?? 'title'),
+        title: Text(localizations.t(routeItem!.title!)),
       ),
       body: SafeArea(
         child: Column(
@@ -36,7 +39,7 @@ class ListScreen extends StatelessWidget {
                 child: OutlinedButton.icon(
                   onPressed: () {},
                   icon: const Icon(Icons.app_registration_outlined),
-                  label: Text(routeData[routeName.path]?.button ?? 'button'),
+                  label: Text(localizations.t(routeItem.button!)),
                 ),
               ),
             )

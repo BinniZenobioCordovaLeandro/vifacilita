@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vifacilita/data/home.data.dart';
+import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/components/image_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,9 +8,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppLocalizations localizations = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ViFaciliTa"),
+        title: Text(localizations.t('app_name')),
       ),
       body: SafeArea(
         child: Center(
@@ -31,6 +33,7 @@ class HomeScreen extends StatelessWidget {
                       final cardItem = homeData[index];
                       return ButtonImage(
                         image: cardItem.icon!,
+                        title: localizations.t(cardItem.title!),
                         onTap: () =>
                             Navigator.of(context).pushNamed(cardItem.link!),
                       );
@@ -41,10 +44,12 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      debugPrint("changed");
+                    },
                     icon: const Icon(Icons.call, color: Colors.white),
                     label: Text(
-                      "Call emergency",
+                      localizations.t('emergency_button'),
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             color: Colors.white,
                           ),

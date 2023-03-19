@@ -1,49 +1,49 @@
 import 'package:vifacilita/models/app_route_model.dart';
 
 final routeData = {
-  Routes.medico.path: AppRouteModel(
-    path: Routes.medico.path,
-    title: "medic",
-    button: "add_medic",
-    collection: "medic_collection",
+  Routes.doctor.path: AppRouteModel(
+    path: Routes.doctor.path,
+    title: "doctor_title",
+    button: "doctor_button",
+    collection: "doctor_collection",
   ),
-  Routes.farmacia.path: AppRouteModel(
-    path: Routes.farmacia.path,
-    title: "farmacia",
-    button: "add_farmacia",
-    collection: "farmacia_collection",
+  Routes.pharmacy.path: AppRouteModel(
+    path: Routes.pharmacy.path,
+    title: "pharmacy_title",
+    button: "pharmacy_button",
+    collection: "pharmacy_collection",
   ),
-  Routes.accompagnatore.path: AppRouteModel(
-    path: Routes.accompagnatore.path,
-    title: "partner",
-    button: "add_partner",
-    collection: "partner_collection",
+  Routes.accompanist.path: AppRouteModel(
+    path: Routes.accompanist.path,
+    title: "accompanist_title",
+    button: "accompanist_button",
+    collection: "accompanist_collection",
   ),
-  Routes.necessita.path: AppRouteModel(
-    path: Routes.necessita.path,
-    title: "prima_necessita",
-    button: "add_necessita",
-    collection: "necessita_collection",
+  Routes.market.path: AppRouteModel(
+    path: Routes.market.path,
+    title: "market_title",
+    button: "market_button",
+    collection: "market_collection",
   ),
 };
 
 enum Routes {
-  medico,
-  farmacia,
-  accompagnatore,
-  necessita,
+  doctor,
+  pharmacy,
+  accompanist,
+  market,
 }
 
 extension RoutesExtension on Routes {
   String? get path {
     switch (this) {
-      case Routes.medico:
-        return 'medico';
-      case Routes.farmacia:
-        return 'farmacia';
-      case Routes.accompagnatore:
-        return 'accompagnatore';
-      case Routes.necessita:
+      case Routes.doctor:
+        return 'doctor';
+      case Routes.pharmacy:
+        return 'pharmacy';
+      case Routes.accompanist:
+        return 'accompanist';
+      case Routes.market:
         return 'necessita';
       default:
         return null;

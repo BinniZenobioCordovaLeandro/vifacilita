@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vifacilita/data/route.data.dart';
+import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/screens/home.screen.dart';
 import 'package:vifacilita/src/screens/list.screen.dart';
 import 'package:vifacilita/src/themes/app.theme.dart';
@@ -18,38 +20,38 @@ class MyApp extends StatelessWidget {
       theme: AppTheme().get(),
       home: const HomeScreen(),
       onGenerateRoute: (RouteSettings settings) {
-        if (settings.name == Routes.medico.path) {
+        if (settings.name == Routes.doctor.path) {
           return MaterialPageRoute(
             builder: (BuildContext context) {
               return const ListScreen(
-                routeName: Routes.medico,
+                routeName: Routes.doctor,
               );
             },
           );
         }
-        if (settings.name == Routes.farmacia.path) {
+        if (settings.name == Routes.pharmacy.path) {
           return MaterialPageRoute(
             builder: (BuildContext context) {
               return const ListScreen(
-                routeName: Routes.farmacia,
+                routeName: Routes.pharmacy,
               );
             },
           );
         }
-        if (settings.name == Routes.accompagnatore.path) {
+        if (settings.name == Routes.accompanist.path) {
           return MaterialPageRoute(
             builder: (BuildContext context) {
               return const ListScreen(
-                routeName: Routes.accompagnatore,
+                routeName: Routes.accompanist,
               );
             },
           );
         }
-        if (settings.name == Routes.necessita.path) {
+        if (settings.name == Routes.market.path) {
           return MaterialPageRoute(
             builder: (BuildContext context) {
               return const ListScreen(
-                routeName: Routes.necessita,
+                routeName: Routes.market,
               );
             },
           );
@@ -57,6 +59,17 @@ class MyApp extends StatelessWidget {
         assert(false, 'Need to implement ${settings.name}');
         return null;
       },
+      supportedLocales: const [
+        Locale('en'),
+        Locale('es'),
+        Locale('it'),
+      ],
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
     );
   }
 }

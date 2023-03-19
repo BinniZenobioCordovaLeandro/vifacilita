@@ -5,21 +5,25 @@ final homeData = [
   HomeCardModel(
     color: "#FFFFFF",
     icon: "assets/images/medico.png",
-    link: Routes.medico.path,
+    link: Routes.doctor.path,
+    title: 'title_medic',
   ),
   HomeCardModel(
     color: "#FFFFFF",
     icon: "assets/images/farmacia.png",
-    link: Routes.farmacia.path,
+    link: Routes.pharmacy.path,
+    title: 'title_farmacia',
   ),
   HomeCardModel(
     color: "#FFFFFF",
     icon: "assets/images/accompagnatore.png",
-    link: Routes.accompagnatore.path,
+    link: Routes.accompanist.path,
+    title: 'title_accompanist',
   ),
   HomeCardModel(
     color: "#FFFFFF",
     icon: "assets/images/prima.necessita.png",
-    link: Routes.necessita.path,
+    link: Routes.market.path,
+    title: 'title_market',
   ),
 ];

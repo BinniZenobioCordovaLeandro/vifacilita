@@ -18,6 +18,42 @@ class AppTheme {
         elevation: 0,
         color: colorBrand,
       ),
+      inputDecorationTheme: const InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(borderRadius),
+          borderSide: BorderSide(color: Color(0xFF757575), width: 1),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(borderRadius),
+          borderSide: BorderSide(color: colorBrand, width: 1),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(borderRadius),
+          borderSide: BorderSide(color: Color(0xFF757575), width: 1),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(borderRadius),
+          borderSide: BorderSide(color: Colors.red, width: 1),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(borderRadius),
+          borderSide: BorderSide(color: Color(0xFF757575), width: 1),
+        ),
+        hintStyle: TextStyle(
+          color: colorBrand,
+          fontFamily: 'SFProDisplay',
+        ),
+        alignLabelWithHint: true,
+        suffixStyle: TextStyle(
+          color: Color(0xFF757575),
+          fontFamily: 'SFProDisplay',
+        ),
+        errorStyle: TextStyle(
+          color: Colors.red,
+          fontFamily: 'SFProDisplay',
+        ),
+        iconColor: colorBrand,
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith<Color>(

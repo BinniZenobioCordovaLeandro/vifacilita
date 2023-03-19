@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
         assert(false, 'Need to implement ${settings.name}');
         return null;
       },
+      locale: const Locale('it'),
       supportedLocales: const [
         Locale('en'),
         Locale('es'),

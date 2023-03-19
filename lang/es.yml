@@ -12,3 +12,91 @@ accompanist_title: "Servicios a domicilio"
 accompanist_button: "Agregar servicio"
 market_title: "Mercado"
 market_button: "Agregar nuevo Mercado"
+doctor:
+  title:
+    label: "Nombre"
+    helper: "Ejemplo: Cirujano Carlos Mendoza"
+    validator: "Escribe el Nombre"
+  subtitle:
+    label: "Dirección"
+    helper: "Ejemplo: Via San Francisco, 16 California, 38123"
+    validator: "Escribe la dirección"
+  category:
+    label: "Categoria"
+    helper: "Ejemplo: Cirujano pediatra"
+    validator: "Escribe la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Ejemplo: +39 123 123 123"
+    validator: "Escribe el Telefono"
+  email:
+    label: "Email"
+    helper: "Ejemplo: carlos_mendoza@gmail.com"
+    validator: "Escribe el Email"
+  button: "Agregar"
+pharmacy:
+  title:
+    label: "Nombre"
+    helper: "Ejemplo: Farmacia de Lorenzo"
+    validator: "Escribe el Nombre"
+  subtitle:
+    label: "Dirección"
+    helper: "Ejemplo: Via San Francisco, 16 California, 38123"
+    validator: "Escribe la dirección"
+  category:
+    label: "Categoria"
+    helper: "Ejemplo: Farmacia de productos pediatricos"
+    validator: "Escribe la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Ejemplo: +39 123 123 123"
+    validator: "Escribe el Telefono"
+  email:
+    label: "Email"
+    helper: "Ejemplo: farmacia_lorenzo@gmail.com"
+    validator: "Escribe el Email"
+  button: "Agregar"
+accompanist:
+  title:
+    label: "Nombre"
+    helper: "Ejemplo: Lorenzo Zaniban"
+    validator: "Escribe el Nombre"
+  subtitle:
+    label: "Tipo de Servicio"
+    helper: "Ejemplo: Limpieza de casa"
+    validator: "Escribe el tipo de servicio"
+  category:
+    label: "Categoria"
+    helper: "Ejemplo: Limpieza de casa"
+    validator: "Escribe la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Ejemplo: +39 123 123 123"
+    validator: "Escribe el Telefono"
+  email:
+    label: "Email"
+    helper: "Ejemplo: lorenzo_zaniban@gmail.com"
+    validator: "Escribe el Email"
+  button: "Agregar"
+market:
+  title:
+    label: "Nombre"
+    helper: "Ejemplo: Eurasia Market"
+    validator: "Escribe el Nombre"
+  subtitle:
+    label: "Dirección"
+    helper: "Ejemplo: Via San Francisco, 16 California, 38123"
+    validator: "Escribe la dirección"
+  category:
+    label: "Categoria"
+    helper: "Ejemplo: Minimarket"
+    validator: "Escribe la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Ejemplo: +39 123 123 123"
+    validator: "Escribe el Telefono"
+  email:
+    label: "Email"
+    helper: "Ejemplo: euraziamarket@gmail.com"
+    validator: "Escribe el Email"
+  button: "Agregar"

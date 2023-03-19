@@ -44,7 +44,7 @@ extension RoutesExtension on Routes {
       case Routes.accompanist:
         return 'accompanist';
       case Routes.market:
-        return 'necessita';
+        return 'market';
       default:
         return null;
     }

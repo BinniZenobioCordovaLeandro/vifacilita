@@ -39,6 +39,7 @@ dependencies:
       url: https://github.com/followthemoney1/modal_bottom_sheet.git
       ref: main
       path: modal_bottom_sheet
+  url_launcher: ^6.1.10
   yaml: ^3.1.1
 
 dev_dependencies:

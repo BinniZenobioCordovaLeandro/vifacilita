@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vifacilita/data/home.data.dart';
 import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/components/image_button.dart';
+import 'package:vifacilita/src/helper/launcher_link.helper.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,9 +45,8 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
-                    onPressed: () {
-                      debugPrint("changed");
-                    },
+                    onPressed: () =>
+                        LauncherLinkHelper(url: '112').makePhoneCall(),
                     icon: const Icon(Icons.call, color: Colors.white),
                     label: Text(
                       localizations.t('emergency_button'),

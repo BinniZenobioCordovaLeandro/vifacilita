@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "40973681690",
+    "project_id": "vifacilita-ab14e",
+    "storage_bucket": "vifacilita-ab14e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40973681690:android:b06ee77bef6f356fe4fda3",
+        "android_client_info": {
+          "package_name": "com.example.vifacilita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40973681690-5esv0o0m3qsg87oj1085abb310neglcc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDETZf6GMebSruSxSMrNjLaRmgDM0ttI1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40973681690-5esv0o0m3qsg87oj1085abb310neglcc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40973681690-dolad4ibdqofurdsaq7l5gmn9vl4jv6v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vifacilita"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40973681690:android:fd0c5f85239fdc4fe4fda3",
+        "android_client_info": {
+          "package_name": "com.vifacilita.vifacilitaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40973681690-5esv0o0m3qsg87oj1085abb310neglcc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDETZf6GMebSruSxSMrNjLaRmgDM0ttI1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40973681690-5esv0o0m3qsg87oj1085abb310neglcc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40973681690-dolad4ibdqofurdsaq7l5gmn9vl4jv6v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vifacilita"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

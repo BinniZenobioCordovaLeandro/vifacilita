@@ -1,12 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vifacilita/data/route.data.dart';
+import 'package:vifacilita/firebase_options.dart';
 import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/screens/home.screen.dart';
 import 'package:vifacilita/src/screens/list.screen.dart';
 import 'package:vifacilita/src/themes/app.theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '40973681690',
     projectId: 'vifacilita-ab14e',
     storageBucket: 'vifacilita-ab14e.appspot.com',
-    iosClientId: '40973681690-sccchnd362hh2susbp6or21g39q2edlp.apps.googleusercontent.com',
+    iosClientId:
+        '40973681690-sccchnd362hh2susbp6or21g39q2edlp.apps.googleusercontent.com',
     iosBundleId: 'com.vifacilita.vifacilitaapp',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '40973681690',
     projectId: 'vifacilita-ab14e',
     storageBucket: 'vifacilita-ab14e.appspot.com',
-    iosClientId: '40973681690-sccchnd362hh2susbp6or21g39q2edlp.apps.googleusercontent.com',
+    iosClientId:
+        '40973681690-sccchnd362hh2susbp6or21g39q2edlp.apps.googleusercontent.com',
     iosBundleId: 'com.vifacilita.vifacilitaapp',
   );
 }

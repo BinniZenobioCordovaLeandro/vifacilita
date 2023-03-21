@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class ModalBottomSheetHelper {
   final Key? key;
@@ -31,24 +30,23 @@ class ModalBottomSheetHelper {
     this.complete,
     this.padding,
   }) {
-    showMaterialModalBottomSheet(
+    showModalBottomSheet(
         context: context!,
         enableDrag: enableDrag!,
         isDismissible: isDismissible!,
         useRootNavigator: useRootNavigator!,
-        expand: false,
-        bounce: false,
         clipBehavior: Clip.hardEdge,
         backgroundColor: Colors.transparent,
-        animationCurve: Curves.easeInOut,
-        duration: const Duration(milliseconds: 500),
         barrierColor:
             Theme.of(context!).scaffoldBackgroundColor.withOpacity(0.5),
+        isScrollControlled: true,
+        useSafeArea: true,
         builder: (BuildContext context) {
           final double maxHeight = ((MediaQuery.of(context).size.height -
                   MediaQuery.of(context).viewPadding.top -
                   (title != null ? 60 + (childFooter != null ? 60 : 0) : 0)) -
-              MediaQuery.of(context).viewInsets.bottom);
+              MediaQuery.of(context).viewInsets.bottom -
+              MediaQuery.of(context).viewPadding.bottom);
           return Container(
             key: key,
             margin: EdgeInsets.only(

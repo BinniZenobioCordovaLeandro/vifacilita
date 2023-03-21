@@ -35,8 +35,9 @@ class HomeScreen extends StatelessWidget {
                       return ButtonImage(
                         image: cardItem.icon!,
                         title: localizations.t(cardItem.title!),
-                        onTap: () =>
-                            Navigator.of(context).pushNamed(cardItem.link!),
+                        onTap: () {
+                          Navigator.of(context).pushNamed(cardItem.link!);
+                        },
                       );
                     },
                   ),

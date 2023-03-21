@@ -27,12 +27,23 @@ class ListRecords extends StatelessWidget {
               return ListTileButton(
                 title: record.title,
                 subtitle: '${record.subtitle} - ${record.category}',
-                onTap: () => LauncherLinkHelper(url: '112').makePhoneCall(),
+                onTap: () =>
+                    LauncherLinkHelper(url: '${record.phone}', isPhone: true)
+                        .makePhoneCall(),
               );
             },
           );
         }
-        return const Text('Error loading records');
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          child: Text(
+            'Error loading records',
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: Colors.red),
+          ),
+        );
       },
       converter: (Store<AppState> store) => mapStateToProps(store),
     );

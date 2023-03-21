@@ -3,6 +3,7 @@ import 'package:vifacilita/data/home.data.dart';
 import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/components/image_button.dart';
 import 'package:vifacilita/src/helper/launcher_link.helper.dart';
+import 'package:vifacilita/src/themes/app.theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,7 +13,10 @@ class HomeScreen extends StatelessWidget {
     AppLocalizations localizations = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(localizations.t('app_name')),
+        centerTitle: true,
+        title: Text(
+          localizations.t('app_name'),
+        ),
       ),
       body: SafeArea(
         child: Center(
@@ -42,18 +46,31 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                 ),
+                SizedBox(
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(AppTheme.borderRadius),
+                    child: Image.asset(
+                      'assets/images/comuna.png',
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+                ),
                 const Divider(),
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: () =>
-                        LauncherLinkHelper(url: '112').makePhoneCall(),
-                    icon: const Icon(Icons.call, color: Colors.white),
-                    label: Text(
-                      localizations.t('emergency_button'),
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            color: Colors.white,
-                          ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                    child: ElevatedButton.icon(
+                      onPressed: () =>
+                          LauncherLinkHelper(url: '112', isPhone: true)
+                              .makePhoneCall(),
+                      icon: const Icon(Icons.call, color: Colors.white),
+                      label: Text(
+                        localizations.t('emergency_button'),
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                              color: Colors.white,
+                            ),
+                      ),
                     ),
                   ),
                 ),

@@ -52,24 +52,27 @@ class _ListScreenState extends State<ListScreen> {
             ),
             SizedBox(
               width: double.infinity,
-              child: FractionallySizedBox(
-                widthFactor: 0.9,
-                child: OutlinedButton.icon(
-                  onPressed: () {
-                    ModalBottomSheetHelper(
-                      context: context,
-                      title: localizations.t(routeItem.button!),
-                      child: SingleChildScrollView(
-                        child: SaveRecordForm(
-                          routeName: widget.routeName,
-                          collection: routeItem.collection!,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: FractionallySizedBox(
+                  widthFactor: 0.9,
+                  child: OutlinedButton.icon(
+                    onPressed: () {
+                      ModalBottomSheetHelper(
+                        context: context,
+                        title: localizations.t(routeItem.button!),
+                        child: SingleChildScrollView(
+                          child: SaveRecordForm(
+                            routeName: widget.routeName,
+                            collection: routeItem.collection!,
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                  icon: const Icon(Icons.add_box),
-                  label: Text(
-                    localizations.t(routeItem.button!),
+                      );
+                    },
+                    icon: const Icon(Icons.add_box),
+                    label: Text(
+                      localizations.t(routeItem.button!),
+                    ),
                   ),
                 ),
               ),

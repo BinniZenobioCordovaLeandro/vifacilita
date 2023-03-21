@@ -40,18 +40,30 @@ class _SaveRecordFormState extends State<SaveRecordForm> {
     return StoreConnector<AppState, SaveRecordProps>(
       builder: (BuildContext context, props) {
         if (props.loading == true) {
-          return const Center(
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: CircularProgressIndicator(),
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20.0),
+            child: Text(
+              'Saving...',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(color: Theme.of(context).primaryColor),
             ),
           );
         }
         if (props.error == true) {
-          return const Text('Error saving record');
+          const snackBar = SnackBar(
+            content: Text('Record losed :C'),
+            backgroundColor: Colors.red,
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
         }
         if (props.success != null) {
-          Navigator.pop(context);
+          const snackBar = SnackBar(
+            content: Text('Yay! record saved! :D'),
+            backgroundColor: Colors.green,
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
         }
         return Form(
           key: _formKey,
@@ -139,6 +151,7 @@ class _SaveRecordFormState extends State<SaveRecordForm> {
                   OutlinedButton.icon(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
+                        Navigator.pop(context);
                         props.saveRecord!(
                           RecordCollectionModel(
                             title: title,

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:vifacilita/data/route.data.dart';
@@ -26,11 +27,24 @@ class _ListScreenState extends State<ListScreen> {
   late AppRouteModel routeItem;
   late CollectionReference collection;
 
+  bool? userIsSigned = true;
+
   @override
   void initState() {
     super.initState();
     routeItem = routeData[widget.routeName.path]!;
     collection = FirebaseFirestore.instance.collection(routeItem.collection!);
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        setState(() {
+          userIsSigned = false;
+        });
+      } else {
+        setState(() {
+          userIsSigned = true;
+        });
+      }
+    });
   }
 
   @override
@@ -50,33 +64,34 @@ class _ListScreenState extends State<ListScreen> {
               flex: 1,
               child: ListRecords(),
             ),
-            SizedBox(
-              width: double.infinity,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: FractionallySizedBox(
-                  widthFactor: 0.9,
-                  child: OutlinedButton.icon(
-                    onPressed: () {
-                      ModalBottomSheetHelper(
-                        context: context,
-                        title: localizations.t(routeItem.button!),
-                        child: SingleChildScrollView(
-                          child: SaveRecordForm(
-                            routeName: widget.routeName,
-                            collection: routeItem.collection!,
+            if (userIsSigned == true)
+              SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: FractionallySizedBox(
+                    widthFactor: 0.9,
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        ModalBottomSheetHelper(
+                          context: context,
+                          title: localizations.t(routeItem.button!),
+                          child: SingleChildScrollView(
+                            child: SaveRecordForm(
+                              routeName: widget.routeName,
+                              collection: routeItem.collection!,
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                    icon: const Icon(Icons.add_box),
-                    label: Text(
-                      localizations.t(routeItem.button!),
+                        );
+                      },
+                      icon: const Icon(Icons.add_box),
+                      label: Text(
+                        localizations.t(routeItem.button!),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            )
+              )
           ],
         ),
       ),

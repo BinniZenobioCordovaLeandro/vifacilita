@@ -1,12 +1,37 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vifacilita/data/home.data.dart';
+import 'package:vifacilita/data/route.data.dart';
 import 'package:vifacilita/localization/app_localizations.dart';
 import 'package:vifacilita/src/components/image_button.dart';
 import 'package:vifacilita/src/helper/launcher_link.helper.dart';
 import 'package:vifacilita/src/themes/app.theme.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool? userIsSigned = true;
+
+  @override
+  void initState() {
+    super.initState();
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        setState(() {
+          userIsSigned = false;
+        });
+      } else {
+        setState(() {
+          userIsSigned = true;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +42,14 @@ class HomeScreen extends StatelessWidget {
         title: Text(
           localizations.t('app_name'),
         ),
+        actions: [
+          if (userIsSigned == false)
+            IconButton(
+              onPressed: () =>
+                  Navigator.of(context).pushNamed(Routes.login.path!),
+              icon: const Icon(Icons.login_outlined),
+            ),
+        ],
       ),
       body: SafeArea(
         child: Center(

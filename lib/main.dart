@@ -10,6 +10,7 @@ import 'package:vifacilita/redux/app_state.dart';
 import 'package:vifacilita/redux/app_store.dart';
 import 'package:vifacilita/src/screens/home.screen.dart';
 import 'package:vifacilita/src/screens/list.screen.dart';
+import 'package:vifacilita/src/screens/login.screen.dart';
 import 'package:vifacilita/src/themes/app.theme.dart';
 
 void main() async {
@@ -40,6 +41,13 @@ class MyApp extends StatelessWidget {
         theme: AppTheme().get(),
         home: const HomeScreen(),
         onGenerateRoute: (RouteSettings settings) {
+          if (settings.name == Routes.login.path) {
+            return MaterialPageRoute(
+              builder: (BuildContext context) {
+                return const LoginScreen();
+              },
+            );
+          }
           if (settings.name == Routes.doctor.path) {
             return MaterialPageRoute(
               builder: (BuildContext context) {
@@ -79,7 +87,6 @@ class MyApp extends StatelessWidget {
           assert(false, 'Need to implement ${settings.name}');
           return null;
         },
-        locale: const Locale('it'),
         supportedLocales: const [
           Locale('en'),
           Locale('es'),

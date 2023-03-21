@@ -28,6 +28,7 @@ final routeData = {
 };
 
 enum Routes {
+  login,
   doctor,
   pharmacy,
   accompanist,
@@ -37,6 +38,8 @@ enum Routes {
 extension RoutesExtension on Routes {
   String? get path {
     switch (this) {
+      case Routes.login:
+        return 'login';
       case Routes.doctor:
         return 'doctor';
       case Routes.pharmacy:

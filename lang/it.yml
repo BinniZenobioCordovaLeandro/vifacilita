@@ -1,0 +1,102 @@
+app_name: "ViFaciliTa"
+emergency_button: "Chiama Emergenza"
+title_medic: "Medico"
+title_farmacia: "Farmacia"
+title_accompanist: "Accompagnatore"
+title_market: "Prima necessità"
+doctor_title: "Medicos"
+doctor_button: "Aggiungi Medico"
+pharmacy_title: "Farmacias"
+pharmacy_button: "Aggiungi Farmacia"
+accompanist_title: "Accompagnatores"
+accompanist_button: "Aggiungi Accompagnatore"
+market_title: "Prima necessità"
+market_button: "Aggiungi un posto"
+doctor:
+  title:
+    label: "Nome"
+    helper: "Esempio: Chirurgo Francesco Santorelli"
+    validator: "Scrivi il nome"
+  subtitle:
+    label: "Indirizzo"
+    helper: "Esempio: Via Ragazzi del 82, 16 Trento, 38123"
+    validator: "Scrivi il indirizzo"
+  category:
+    label: "Categoria"
+    helper: "Esempio: Chirurgo pediatra"
+    validator: "Scrivi la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Esempio: +39 123 123 123"
+    validator: "Scrivi il Telefono"
+  email:
+    label: "Email"
+    helper: "Esempio: francesco_santo@gmail.com"
+    validator: "Scrivi il Email"
+  button: "Aggiungi"
+pharmacy:
+  title:
+    label: "Nome"
+    helper: "Esempio: Farmacia SA. Lorenzo"
+    validator: "Scrivi il nome"
+  subtitle:
+    label: "Indirizzo"
+    helper: "Esempio: Via Ragazzi del 82, 16 Trento, 38123"
+    validator: "Scrivi il indirizzo"
+  category:
+    label: "Categoria"
+    helper: "Esempio: Farmacia pediatrica"
+    validator: "Scrivi la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Esempio: +39 123 123 123"
+    validator: "Scrivi il Telefono"
+  email:
+    label: "Email"
+    helper: "Esempio: farmacia_lorenzo@gmail.com"
+    validator: "Scrivi il Email"
+  button: "Aggiungi"
+accompanist:
+  title:
+    label: "Nome"
+    helper: "Esempio: Lorenzo Zaniban"
+    validator: "Scrivi il nome"
+  subtitle:
+    label: "Tipo di Servizio"
+    helper: "Esempio: Pulirò la casa per te."
+    validator: "Scrivi il Tipo di Servizio"
+  category:
+    label: "Categoria"
+    helper: "Esempio: Pulizia"
+    validator: "Scrivi la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Esempio: +39 123 123 123"
+    validator: "Scrivi il Telefono"
+  email:
+    label: "Email"
+    helper: "Esempio: lorenzo_zaniban@gmail.com"
+    validator: "Scrivi il Email"
+  button: "Aggiungi"
+market:
+  title:
+    label: "Nome"
+    helper: "Esempio: Mercato contadino"
+    validator: "Scrivi il nome"
+  subtitle:
+    label: "Indirizzo"
+    helper: "Esempio: Via Ragazzi del 82, 16 Trento, 38123"
+    validator: "Scrivi il indirizzo"
+  category:
+    label: "Categoria"
+    helper: "Esempio: Mercato"
+    validator: "Scrivi la Categoria"
+  phone:
+    label: "Telefono"
+    helper: "Esempio: +39 123 123 123"
+    validator: "Scrivi il Telefono"
+  email:
+    label: "Email"
+    helper: "Esempio: mercato_contadino@gmail.com"
+    validator: "Scrivi il Email"
+  button: "Aggiungi"

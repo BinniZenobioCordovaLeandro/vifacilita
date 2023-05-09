@@ -1,0 +1,102 @@
+app_name: "ViFaciliTa"
+emergency_button: "Call Emergency"
+title_medic: "Doctor"
+title_farmacia: "Pharmacy"
+title_accompanist: "House care"
+title_market: "Market"
+doctor_title: "Doctors"
+doctor_button: "Add new Doctor"
+pharmacy_title: "Pharmacies"
+pharmacy_button: "Add new Pharmacy"
+accompanist_title: "Accompanists"
+accompanist_button: "Add new Accompanist"
+market_title: "Markets"
+market_button: "Add new Market"
+doctor:
+  title:
+    label: "Name"
+    helper: "Example: Surgeon Obama Washington"
+    validator: "Write the Name"
+  subtitle:
+    label: "Address"
+    helper: "Example: Street 56, 16 California, 38123"
+    validator: "Write the Address"
+  category:
+    label: "Category"
+    helper: "Example: Pediatric surgeon"
+    validator: "Write the category"
+  phone:
+    label: "Phone"
+    helper: "Example: +39 123 123 123"
+    validator: "Write the Phone"
+  email:
+    label: "Email"
+    helper: "Example: obama_whasshington@gmail.com"
+    validator: "Write the email"
+  button: "Add"
+pharmacy:
+  title:
+    label: "Name"
+    helper: "Example: Farmacia S. Lorenzo"
+    validator: "Write the Name"
+  subtitle:
+    label: "Address"
+    helper: "Example: Street 56, 16 California, 38123"
+    validator: "Write the Address"
+  category:
+    label: "Category"
+    helper: "Example: Pediatric Pharm"
+    validator: "Write the category"
+  phone:
+    label: "Phone"
+    helper: "Example: +39 123 123 123"
+    validator: "Write the Phone"
+  email:
+    label: "Email"
+    helper: "Example: farmacia_lorenzo@gmail.com"
+    validator: "Write the email"
+  button: "Add"
+accompanist:
+  title:
+    label: "Name"
+    helper: "Example: Lorenzo Zaniban"
+    validator: "Write the Name"
+  subtitle:
+    label: "Service type"
+    helper: "Example: I will help you clean your house"
+    validator: "Write the Service Type"
+  category:
+    label: "Category"
+    helper: "Example: House cleaning"
+    validator: "Write the category"
+  phone:
+    label: "Phone"
+    helper: "Example: +39 123 123 123"
+    validator: "Write the Phone"
+  email:
+    label: "Email"
+    helper: "Example: lorenzo_zaniban@pulizia.com"
+    validator: "Write the email"
+  button: "Add"
+market:
+  title:
+    label: "Name"
+    helper: "Example: Mix Market"
+    validator: "Write the Name"
+  subtitle:
+    label: "Address"
+    helper: "Example: Street 56, 16 California, 38123"
+    validator: "Write the Address"
+  category:
+    label: "Category"
+    helper: "Example: Minimarket"
+    validator: "Write the category"
+  phone:
+    label: "Phone"
+    helper: "Example: +39 123 123 123"
+    validator: "Write the Phone"
+  email:
+    label: "Email"
+    helper: "Example: mixmarket@gmail.com"
+    validator: "Write the email"
+  button: "Add"

@@ -1,4 +1,4 @@
-package com.example.vifacilita
+package com.vifacilita.vifacilitaapp
 
 import io.flutter.embedding.android.FlutterActivity
 
